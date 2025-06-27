@@ -29,6 +29,9 @@
 
 # This file appends into modesetting.c for the following reason:
 # The modesetting driver uses Mesa/Vulkan for rendering. Add HDR10 support via Vulkan’s VK_EXT_hdr_metadata
+# Initialize Vulkan in modesetting.c:PreInit.
+# Call SetupVulkanHDR during driver initialization.
+# Hook ApplyHDRMetadata into the rendering pipeline (e.g., BlockHandler or Composite).
 
 #include <vulkan/vulkan.h>
 #include "XHDR.h"
