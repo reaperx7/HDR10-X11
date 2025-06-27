@@ -12,6 +12,21 @@ This code is licensed under BSDL 3 Clause license and is provided as-is with no 
 
 -------------------------------------------------------------------------------------------------------
 
+Current goals:
+
+- Provides HDR10 support for XLibre, enabling 10-bit color and HDR metadata.
+
+Requests:
+  SetHDRMetadata(window, primaries, eotf, max_cll, min_lum, max_lum)
+  Sets HDR metadata for a window (Rec.2020, PQ, CTA-861-H).
+
+- QueryHDRCapabilities(screen) -> (supported, max_depth, eotfs)
+- Queries HDR support for a screen.
+
+Configuration:
+- Option "Enable_HDR10" "on|off" (default: off)
+- Enables HDR10 in the modesetting driver.
+
 Possible limitations of this code framework:
 
 - Vulkan Dependency: Assumes amdvlk or Mesa 25+ with VK_EXT_hdr_metadata. Older Mesa versions lack
