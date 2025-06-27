@@ -30,5 +30,10 @@
 # Note: Debugging is enabled via LogMessage calls (already included in code snippets).
 # This file optionally appends into xf86Init.c for debugging purposes only.
 
+# You will need to patch MPV to use XSetHDRMetadata for HDR10 content.
+# Then run: mpv --vo=x11 --x11-hdr-metadata test_hdr10.mp4
+# Check /var/log/Xorg.0.log for XHDR and Modesetting debug messages.
+# Ensure Vulkan HDR metadata is applied correctly.
+
 LogInit(NULL, NULL);
 LogSetParameter(XLOG_VERBOSITY, 5); // Enable debug level
