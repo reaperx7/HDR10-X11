@@ -1,0 +1,5 @@
+Section "Device"
+    Identifier "Modesetting"
+    Driver "modesetting"
+    Option "Enable_HDR10" "on"
+EndSection
