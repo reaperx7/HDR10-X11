@@ -79,11 +79,14 @@ ProcXHDRQueryHDRCapabilities(ClientPtr client)
     if (rc != Success)
         return rc;
 
+    ModesettingPtr ms = ModesettingGetPtr(pScreen->myNum);
+    Bool supported = ms->enableHDR10 && ms->hdrCapable;
+    
     reply.type = X_Reply;
     reply.sequenceNumber = client->sequence;
     reply.length = 8; // 1 BOOL + 1 CARD8 + 6 CARD32s
-    reply.data1 = 1;  // supported: TRUE
-    reply.data2 = 10; // max_depth: 10-bit
+    reply.data1 = supported;  // supported: TRUE
+    reply.data2 = supported ? 10 : 8; // max_depth: 10-bit
     // Supported EOTFs: 0=SDR, 1=PQ
     CARD32 eotfs[] = {0, 1};
 
