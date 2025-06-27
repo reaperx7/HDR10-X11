@@ -27,6 +27,9 @@
 #OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 #OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+# Notes: Update libX11’s Makefile.am to include XHDR.c.
+# Clients like MPV can use XSetHDRMetadata to set HDR10 parameters.
+
 #include <X11/Xlib.h>
 #include <X11/extensions/XHDR.h>
 
