@@ -30,6 +30,8 @@
 # This file requires the follwoing work be done:
 # Add XHDRExtensionInit call to dix/main.c in InitExtensions.
 # Update Makefile.am in dix/ to include xhdr.c.
+# Access the modesetting driver’s enableHDR10 flag to adjust the supported response.
+# Ensure XSetHDRMetadata fails gracefully if enableHDR10 is FALSE
 
 #include <X11/X.h>
 #include <X11/Xproto.h>
