@@ -27,7 +27,7 @@
 #OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 #OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#This file is an append to the protocols
+#This file is an append to the protocols. Trying to remember where this goes.
 
 XHDR
   SetHDRMetadata
