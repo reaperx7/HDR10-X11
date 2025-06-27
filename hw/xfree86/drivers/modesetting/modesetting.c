@@ -32,6 +32,11 @@
 # Initialize Vulkan in modesetting.c:PreInit.
 # Call SetupVulkanHDR during driver initialization.
 # Hook ApplyHDRMetadata into the rendering pipeline (e.g., BlockHandler or Composite).
+# Initialize Vulkan in modesetting.c:PreInit.
+# Call SetupVulkanHDR during driver initialization.
+# Hook ApplyHDRMetadata into the rendering pipeline (e.g., BlockHandler or Composite).
+
+
 
 #include <vulkan/vulkan.h>
 #include "XHDR.h"
